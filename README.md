@@ -1,3 +1,4 @@
+
 # 🚀 Social Platform API
 
 ![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=flat&logo=dotnet)
@@ -84,15 +85,15 @@ erDiagram
         string Token
         bool IsActive
     }
+```
+
+---
+
 ## 🔐 Security Architecture: The Middleware Pipeline
 
 How the API secures every request and enforces Bans/Logouts instantly:
 
-code
-Mermaid
-download
-content_copy
-expand_less
+```mermaid
 graph TD
     A[Client Request] -->|Bearer Token| B(Authentication Middleware)
     B -->|Validate Signature| C{Signature OK?}
@@ -106,52 +107,58 @@ graph TD
     style E fill:#f96,stroke:#333,stroke-width:2px,color:black
     style F fill:#ff9,stroke:#333,stroke-width:2px,color:black
     style D fill:#f00,stroke:#333,stroke-width:2px,color:white
-🚀 Getting Started
+```
+
+---
+
+## 🚀 Getting Started
 
 Follow these steps to set up the project locally.
 
-1. Configure Database
-
-Update appsettings.json in the API project with your connection string:
-
-code
-JSON
-download
-content_copy
-expand_less
+### 1. Configure Database
+Update `appsettings.json` in the API project with your connection string:
+```json
 "ConnectionStrings": {
   "DefaultConnection": "Server=YOUR_SERVER;Database=SocialPlatformDb;Trusted_Connection=True;TrustServerCertificate=True;"
 }
-2. Run Migrations
+```
 
+### 2. Run Migrations
 Apply the database schema:
-
-code
-Bash
-download
-content_copy
-expand_less
+```bash
 dotnet ef database update
-3. Run the Application
+```
 
-Start the API. On the first run, the Seeding service will create the default Admin.
-
-code
-Bash
-download
-content_copy
-expand_less
+### 3. Run the Application
+Start the API. On the first run, the **Seeding** service will create the default Admin.
+```bash
 dotnet run
+```
 
-Default Super Admin Credentials:
-Email: admin@social.com
-Password: P@ssw0rd123!
+> **Default Super Admin Credentials:**  
+> **Email:** `admin@social.com`  
+> **Password:** `P@ssw0rd123!`
+
+---
 
 ## 🧪 API Endpoints Snapshot
-Feature	Method	Endpoint	Description	Auth
-Auth	POST	/api/User/login	Login & Get Token	❌
-Auth	POST	/api/User/logout	Secure Logout (Revokes Token)	✅
-Admin	POST	/api/UserBans	Ban a User (Admin Only)	👮‍♂️
-Admin	GET	/api/UserBans/{userId}	Get Ban History	👮‍♂️
-Posts	POST	/api/Posts	Create Post	✅
-Posts	GET	/api/Posts/search	Search Posts	✅
+
+| Feature | Method | Endpoint | Description | Auth |
+| :--- | :--- | :--- | :--- | :---: |
+| **Auth** | `POST` | `/api/User/login` | Login & Get Token | ❌ |
+| **Auth** | `POST` | `/api/User/logout` | **Secure Logout** (Revokes Token) | ✅ |
+| **Admin** | `POST` | `/api/UserBans` | Ban a User (Admin Only) | 👮‍♂️ |
+| **Admin** | `GET` | `/api/UserBans/{userId}`| Get Ban History | 👮‍♂️ |
+| **Posts** | `POST` | `/api/Posts` | Create Post | ✅ |
+| **Posts** | `GET` | `/api/Posts/search` | Search Posts | ✅ |
+
+---
+
+## 👤 Author
+
+**Ahmad**  
+.NET Backend Developer  
+
+---
+*Built with ❤️ using .NET 8*
+```
