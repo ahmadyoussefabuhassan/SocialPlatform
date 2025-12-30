@@ -84,7 +84,7 @@ erDiagram
         string Token
         bool IsActive
     }
-🔐 Security Architecture: The Middleware Pipeline
+## 🔐 Security Architecture: The Middleware Pipeline
 
 How the API secures every request and enforces Bans/Logouts instantly:
 
@@ -147,7 +147,7 @@ Default Super Admin Credentials:
 Email: admin@social.com
 Password: P@ssw0rd123!
 
-🧪 API Endpoints Snapshot
+## 🧪 API Endpoints Snapshot
 Feature	Method	Endpoint	Description	Auth
 Auth	POST	/api/User/login	Login & Get Token	❌
 Auth	POST	/api/User/logout	Secure Logout (Revokes Token)	✅
@@ -155,12 +155,3 @@ Admin	POST	/api/UserBans	Ban a User (Admin Only)	👮‍♂️
 Admin	GET	/api/UserBans/{userId}	Get Ban History	👮‍♂️
 Posts	POST	/api/Posts	Create Post	✅
 Posts	GET	/api/Posts/search	Search Posts	✅
-👤 Author
-
-Ahmad
-.NET Backend Developer
-
-Built with ❤️ using .NET 8
-
-content_copy
-expand_less
