@@ -3,7 +3,7 @@
 
 ![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=flat&logo=dotnet)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
-![Architecture](https://img.shields.io/badge/Architecture-Layered%20Architecture-blue)
+![Architecture](https://img.shields.io/badge/Architecture-Clean%20Architecture-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 A fully functional, enterprise-grade RESTful API for a social media platform, engineered with **ASP.NET Core 8**. This project demonstrates professional backend development practices, focusing on **Clean Architecture**, **Advanced Security**, and **Scalability**. It features a custom **Stateful JWT Authentication** system with middleware-based token blacklisting for secure logouts.
